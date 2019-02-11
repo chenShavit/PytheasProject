@@ -13,41 +13,17 @@ Navigation.registerComponent('pytheas.FirstStep', ()=> FirstStep);
 
 // Start a App
 function start() {
-Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
-    root: {
-      children: [{
+  Navigation.events().registerAppLaunchedListener(() => {
+    Navigation.setRoot({
+      root: {
         component: {
-          name: 'pytheas.AuthScreen',
+          name: 'pytheas.AuthScreen'
         }
-      }],
-            }
+      }
+    });
   });
-});
-Navigation.setRoot({
-  root: {
-    bottomTabs: {
-      children: [{
-        stack: {
-          children: [{
-            component: {
-              name: 'pytheas.AuthScreen',
-            }
-          }],
-          options: {
-            bottomTab: {
-              text: 'Tab 1',
-            }
-          }
-        }
-      },
-      {
-      }]
-    }
-  }
-
-});
 }
+
 module.exports = {
   start
 };
