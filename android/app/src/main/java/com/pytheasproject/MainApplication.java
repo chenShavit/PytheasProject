@@ -12,6 +12,7 @@ import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 import com.airbnb.android.react.maps.MapsPackage;
+import com.imagepicker.ImagePickerPackage; 
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,7 +38,10 @@ public class MainApplication extends NavigationApplication {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-                new MapsPackage()
+                new MapsPackage(),
+                new ImagePickerPackage(), // <-- add this line
+                // OR if you want to customize dialog style
+                new ImagePickerPackage(R.style.my_dialog_style)
         );
     }
   

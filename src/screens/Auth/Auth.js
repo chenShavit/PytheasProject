@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image, Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
+import PickImage from '../../components/PickImage/PickImage';
 
 class AuthScreen extends Component {
     state = {
@@ -59,6 +60,7 @@ class AuthScreen extends Component {
                 {marker}
                 </MapView>
                 <Button title="My location" onPress={this.getLocationHandler} />
+                <PickImage/>
                 <Button title="Start" onPress={() => navigate('FirstStep', { name: 'pytheas.FirstStep' })} />
             </View>
         );
